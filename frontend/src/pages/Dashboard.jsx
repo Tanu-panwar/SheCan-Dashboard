@@ -8,11 +8,11 @@ export default function Dashboard() {
   const [leaderboard, setLeaderboard] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/intern')
+    fetch('https://shecan-backend-mifn.onrender.com/api/intern')
       .then(res => res.json())
       .then(data => setIntern(data));
 
-    fetch('http://localhost:5000/api/leaderboard')
+    fetch('https://shecan-backend-mifn.onrender.com/api/leaderboard')
       .then(res => res.json())
       .then(data => setLeaderboard(data));
   }, []);
