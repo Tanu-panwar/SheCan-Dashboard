@@ -4,6 +4,9 @@
   background-size: cover;
   background-position: center;
   height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  touch-action: none;
   width: 100%;
   position: relative;
   color: white;
@@ -18,7 +21,8 @@
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  padding: 80px 20px 0 20px;  /* Desktop default */
+  padding: 80px 20px 0 20px;
+  /* Desktop default */
 }
 
 .home-title {
@@ -36,7 +40,8 @@
 /* ✅ Mobile-specific adjustment */
 @media (max-width: 768px) {
   .home-overlay {
-    padding-top: 60px; /* Less space on top for mobile */
+    padding-top: 60px;
+    /* Less space on top for mobile */
   }
 
   .home-title {
