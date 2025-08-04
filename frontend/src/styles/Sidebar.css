@@ -1,0 +1,122 @@
+/* Base Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 60px; /* below navbar */
+  left: 0;
+  height: calc(100vh - 60px);
+  width: 170px;
+  background: linear-gradient(180deg, #1e1e2f 0%, #2c2c3a 100%);
+  color: #ffffff;
+  padding: 24px;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+/* Collapsed state */
+.sidebar.collapsed {
+  transform: translateX(-100%);
+}
+
+/* Sidebar nav links */
+.sidebar nav a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin: 12px 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+.sidebar nav a:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffa94d;
+}
+
+.sidebar nav a.log {
+  color: #ff6666;
+}
+
+.sidebar nav a.log:hover {
+  background-color: rgba(255, 102, 102, 0.1);
+  color: #ff4d4d;
+  cursor: pointer;
+}
+
+/* Footer in sidebar */
+.sidebar-footer {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 24px;
+  right: 24px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  font-style: italic;
+}
+
+.sidebar-footer hr {
+  border: none;
+  border-top: 1px solid #444;
+  margin-bottom: 8px;
+}
+
+/* Dashboard content container */
+.dashboard-container {
+  margin-left: 220px;
+  padding: 80px 24px 24px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Hamburger button */
+.hamburger-icon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* Sidebar on small screens */
+  .sidebar {
+    transform: translateX(-100%);
+    position: fixed;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .dashboard-container {
+    margin-left: 0;
+  }
+
+  /* Show hamburger only on mobile */
+  .hamburger {
+    display: flex;
+    position: fixed;
+    top: 0.75rem;
+    left: 1rem;
+    width: 38px;
+    height: 38px;
+    background-color: #ff6600;
+    color: white;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1100;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 999;
+}

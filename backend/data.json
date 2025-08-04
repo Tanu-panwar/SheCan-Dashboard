@@ -1,0 +1,21 @@
+{
+  "intern": {
+    "name": "Tanu Panwar",
+    "email": "tanu@example.com",
+    "city": "Delhi",
+    "referralCode": "tanu2025",
+    "donationsRaised": 3500,
+    "rewards": [
+      "Certificate of Participation",
+      "Free LinkedIn Workshop Access",
+      "Top 10% Badge"
+    ]
+  },
+  "leaderboard": [
+    { "rank": 1, "name": "Ananya Sharma", "donations": 5200 },
+    { "rank": 2, "name": "Tanu Panwar", "donations": 3500 },
+    { "rank": 3, "name": "Riya Mehta", "donations": 3100 },
+    { "rank": 4, "name": "Simran Kaur", "donations": 2700 },
+    { "rank": 5, "name": "Megha Sharma", "donations": 2600 }
+  ]
+}
